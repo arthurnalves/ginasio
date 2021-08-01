@@ -1,0 +1,6 @@
+[submodule "neat-python"]
+	path = neat-python
+	url = https://github.com/arthurnalves/neat-python
+[submodule "gym-snake"]
+	path = gym-snake
+	url = https://github.com/arthurnalves/gym-snake
