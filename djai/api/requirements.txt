@@ -29,8 +29,5 @@ sqlparse==0.4.2
 stevedore==3.5.0
 texttable==1.6.2
 urllib3==1.25.8
-virtualenv==20.8.1
-virtualenv-clone==0.5.7
-virtualenvwrapper==4.8.4
 websocket-client==0.53.0
 zipp==1.0.0
