@@ -11,13 +11,13 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - 5432:5432
-  djangoserver:
+  web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./api:/home/user/api
     environment:
-      - HOST_DB=db
+      - POSTGRES_HOST=db
     ports:
       - 8000:8000
     depends_on:
@@ -28,6 +28,8 @@ services:
     command: python manage.py migrate
     volumes:
       - ./api:/home/user/api
+    environment:
+      - POSTGRES_HOST=db
     depends_on:
       - db
   pgadmin:
