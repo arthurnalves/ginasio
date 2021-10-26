@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from os import path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'db',
+        'HOST': os.getenv('DB_HOST'),
         'PORT': 5432,
     }
 }
@@ -125,7 +125,7 @@ USE_L10N = True
 USE_TZ = True
 
 MEDIA_URL = '/MEDIA/'
-MEDIA_ROOT = (path.join(BASE_DIR, MEDIA_URL))
+MEDIA_ROOT = (os.path.join(BASE_DIR, MEDIA_URL))
 
 
 # Static files (CSS, JavaScript, Images)
