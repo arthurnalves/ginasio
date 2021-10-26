@@ -1,4 +1,5 @@
 from django.contrib import admin
-from logic.models import Agent
+from logic import models
 
-admin.site.register(Agent)
+admin.site.register(models.Agent)
+admin.site.register(models.Environment)

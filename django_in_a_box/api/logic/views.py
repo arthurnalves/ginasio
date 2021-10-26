@@ -11,3 +11,11 @@ class AgentViewSet(viewsets.ModelViewSet):
     """
     serializer_class = serializers.AgentSerializer
     queryset = models.Agent.objects.all()
+
+
+class EnvironmentViewSet(viewsets.ModelViewSet):
+    """
+    A viewset for viewing and editing agent instances.
+    """
+    serializer_class = serializers.EnvironmentSerializer
+    queryset = models.Environment.objects.all()

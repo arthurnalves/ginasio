@@ -7,3 +7,9 @@ class AgentSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Agent
         fields = '__all__'
+
+
+class EnvironmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Environment
+        fields = '__all__'
