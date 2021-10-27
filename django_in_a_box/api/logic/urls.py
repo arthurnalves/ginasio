@@ -5,7 +5,8 @@ from logic import views
 
 
 router = DefaultRouter()
-router.register(r'agents', views.AgentViewSet)
-router.register(r'environments', views.EnvironmentViewSet)
+router.register(r'agent', views.AgentViewSet)
+router.register(r'environment', views.EnvironmentViewSet)
+router.register(r'data', views.DataViewSet)
 
 urlpatterns = router.urls

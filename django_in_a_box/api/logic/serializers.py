@@ -13,3 +13,8 @@ class EnvironmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Environment
         fields = '__all__'
+
+class DataSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Data
+        fields = '__all__'
